@@ -88,6 +88,13 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+// Use of composition to make object we can traverse to determine user preferences
+var characterTypeChoices = {
+  lowercase: lowerCasedCharacters,
+  uppercase: upperCasedCharacters,
+  numeric: numericCharacters,
+  special: specialCharacters
+}
 
 // // Function to prompt user for password options
 function getPasswordOptions() {
@@ -113,6 +120,8 @@ options.pwLength = prompt("How long would you like your password to be?" + "\n(N
 
 // Keep prompting for characterTypes if none have been chosen
 while (options.characterTypes.length < 1) {
+  
+  // Iterate through choices & prompt user to determine whether each should be included
   
 }
 
