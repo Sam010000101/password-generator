@@ -90,7 +90,7 @@ var upperCasedCharacters = [
 
 
 // // Function to prompt user for password options
-// function getPasswordOptions() {
+function getPasswordOptions() {
 
 var options = {
   pwLength: 0,
@@ -104,12 +104,17 @@ options.pwLength = prompt("How long would you like your password to be?" + "\n(N
     alert("Bye bye!");
   }
 
-  //  // If user enters password length lese than 10 or greater than 64 the alert that password must be min. of 10 & max of 64 characters  
-  //  if (options.pwLength < 10 || options.password > 64) {
-  //   alert("Password must be between " + 10 + " and " + 64);
-  //   getPasswordOptions();
-  //  }
-  // }
+   // If user enters password length lese than 10 or greater than 64 the alert that password must be min. of 10 & max of 64 characters  
+   if (options.pwLength < 10 || options.password > 64) {
+    alert("Password must be between " + 10 + " and " + 64);
+    getPasswordOptions();
+   }
+  }
+
+// Function for getting a random element from an array
+function getRandom(arr) {
+
+}
 
 // Function to generate password with user input
 function generatePassword() {
