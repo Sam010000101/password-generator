@@ -96,6 +96,10 @@ var characterTypeChoices = {
   special: specialCharacters
 }
 
+// constants
+var MIN_PW_LENGTH = 10;
+var MAX_PW_LENGTH = 64;
+
 // // Function to prompt user for password options
 function getPasswordOptions() {
 
@@ -104,7 +108,7 @@ function getPasswordOptions() {
     characterTypes: []
   }
 
-  options.pwLength = prompt("How long would you like your password to be?" + "\n(NOTE. Must be between " + 10 + " and " + 64 + " characters.)");
+  options.pwLength = prompt("How long would you like your password to be?" + "\n(NOTE. Must be between " + MIN_PW_LENGTH + " and " + MAX_PW_LENGTH + " characters.)");
 
   // If user hits "Cancel" then alert parting note & stop password generator
   if (options.pwLength == "null" || options.pwLength == null || options.pwLength == "") {
@@ -115,8 +119,8 @@ function getPasswordOptions() {
   
 
   // If user enters password length lese than 10 or greater than 64 the alert that password must be min. of 10 & max of 64 characters  
-  if (options.pwLength < 10 || options.password > 64) {
-    alert("Password must be between " + 10 + " and " + 64);
+  if (options.pwLength < MIN_PW_LENGTH || options.password > MAX_PW_LENGTH) {
+    alert("Password must be between " + MIN_PW_LENGTH + " and " + MAX_PW_LENGTH);
     getPasswordOptions();
   }
 
