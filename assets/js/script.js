@@ -137,7 +137,7 @@ options.pwLength = prompt("How long would you like your password to be?" + "\n(N
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  return arr[Math.floor(Math.random() * arr.length)];
 }
 
 // Function to generate password with user input
