@@ -109,7 +109,10 @@ function getPasswordOptions() {
   // If user hits "Cancel" then alert parting note & stop password generator
   if (options.pwLength == "null" || options.pwLength == null || options.pwLength == "") {
     alert("Bye bye!");
+    return getPasswordOptions;
   }
+
+  
 
   // If user enters password length lese than 10 or greater than 64 the alert that password must be min. of 10 & max of 64 characters  
   if (options.pwLength < 10 || options.password > 64) {
