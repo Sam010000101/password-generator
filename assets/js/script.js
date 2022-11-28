@@ -99,27 +99,27 @@ var characterTypeChoices = {
 // // Function to prompt user for password options
 function getPasswordOptions() {
 
-var options = {
-  pwLength: 0,
-  characterTypes: []
-}
+  var options = {
+    pwLength: 0,
+    characterTypes: []
+  }
 
-options.pwLength = prompt("How long would you like your password to be?" + "\n(NOTE. Must be between " + 10 + " and " + 64 + " characters.)");
+  options.pwLength = prompt("How long would you like your password to be?" + "\n(NOTE. Must be between " + 10 + " and " + 64 + " characters.)");
 
   // If user hits "Cancel" then alert parting note & stop password generator
-  if (options.pwLength == "null" || options.pwLength == null || options.pwLength == "") { 
+  if (options.pwLength == "null" || options.pwLength == null || options.pwLength == "") {
     alert("Bye bye!");
   }
 
-   // If user enters password length lese than 10 or greater than 64 the alert that password must be min. of 10 & max of 64 characters  
-   if (options.pwLength < 10 || options.password > 64) {
+  // If user enters password length lese than 10 or greater than 64 the alert that password must be min. of 10 & max of 64 characters  
+  if (options.pwLength < 10 || options.password > 64) {
     alert("Password must be between " + 10 + " and " + 64);
     getPasswordOptions();
-   }
+  }
 
   // Keep prompting for characterTypes if none have been chosen
   while (options.characterTypes.length < 1) {
-    
+
     // Iterate through choices & prompt user to determine whether each should be included
     for (var charType in characterTypeChoices) {
       if (prompt("Include " + charType + " characters?") === "y") {
@@ -143,6 +143,15 @@ function getRandom(arr) {
 // Function to generate password with user input
 function generatePassword() {
 
+  // Get user's preferences - length & character types
+  var options = getPasswordOptions();
+  var password = "";
+
+  for (var i = 0; i < options.pwLength; i++) {
+    var charSet = getRandom(options.characterTypes);
+    password = password.concat(getRandom(charSet));
+  }
+  return password;
 }
 
 // Get references to the #generate element
