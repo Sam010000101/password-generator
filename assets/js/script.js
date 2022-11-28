@@ -116,14 +116,23 @@ options.pwLength = prompt("How long would you like your password to be?" + "\n(N
     alert("Password must be between " + 10 + " and " + 64);
     getPasswordOptions();
    }
-  }
 
-// Keep prompting for characterTypes if none have been chosen
-while (options.characterTypes.length < 1) {
-  
-  // Iterate through choices & prompt user to determine whether each should be included
-  
+  // Keep prompting for characterTypes if none have been chosen
+  while (options.characterTypes.length < 1) {
+    
+    // Iterate through choices & prompt user to determine whether each should be included
+    for (var charType in characterTypeChoices) {
+      if (prompt("Include " + charType + " characters?") === "y") {
+        options.characterTypes.push(characterTypeChoices[charType]);
+      }
+    }
+    if (options.characterTypes.length === 0) {
+      alert("You must include at least one set of characters - please OK an option by typing \"Y\".")
+    }
+  }
+  return options;
 }
+
 
 
 // Function for getting a random element from an array
