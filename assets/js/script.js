@@ -111,6 +111,12 @@ options.pwLength = prompt("How long would you like your password to be?" + "\n(N
    }
   }
 
+// Keep prompting for characterTypes if none have been chosen
+while (options.characterTypes.length < 1) {
+  
+}
+
+
 // Function for getting a random element from an array
 function getRandom(arr) {
 
