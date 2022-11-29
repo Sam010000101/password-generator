@@ -15,13 +15,13 @@ I have learned and applied the following aspects as part of this challenge;
     <li><strong>Prompts</strong> - code that produces a browser object that requires user input.</li>
     <li><strong>Alerts</strong> - code that produces a browser object that alerts the user of a defined message.</li>
 <li><strong>The While Loop</strong> - a JS statement that loops through a block of code as long as a specified condition is true.</li>
-<li><strong>1. Math.Random & Math.floor</strong> - JS statements that 1. returns a random number 2. rounds down and returns the largest integer less than or equal to a given numbe </li>
+<li><strong>1. Math.Random & 2. Math.floor</strong> - JS statements that 1. returns a random number 2. rounds down and returns the largest integer less than or equal to a given numbe </li>
 </ul> 
 
 
 ### Result - <br>
 <i>My password generator displays as intened on screens of varying sizes, as below;</i>
-![alt text](.assets/images/05-javascript-challenge-demo.png)
+![alt text](assets/images/05-javascript-challenge-demo.png)
 
 
 ### Here is the deployed site; 
@@ -44,11 +44,11 @@ N/A
 ## Usage 
 Hit the "Generate Password" button and you'll be greated with a request to specify you password length (must be between 10 & 64 characters, inclusive;
 
-![alt text](.assets/images/pg-prompt.png)
+![alt text](assets/images/pg-prompt.png)
 
 You'll then be prompted to choose which character types you would like your password to contain;
 
-![alt text](.assets/images/charType.png)
+![alt text](assets/images/charType.png)
 
 
 
@@ -97,5 +97,5 @@ Final landing page deployed & fully functional
 ---
 
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
-# Bootstrap-Portfolio
+# Password-Generator
 
